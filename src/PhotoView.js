@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import ShowImage from './ShowImage'
 
 class ProjectView extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (

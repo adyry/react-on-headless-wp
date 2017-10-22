@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-import Menu from './Menu'
+// import Menu from './Menu'
 import Project from './Project'
 import PhotoView from './PhotoView'
 
@@ -10,12 +10,11 @@ class App extends React.Component {
         this.state = {
             data: [],
             photos: [],
-            tech: null,
-            techFetched: null
+            tech: null
         };
         this.getProjects();
+        this.getProjectTechnologies();
         this.getPhotos();
-        this.getTechName = this.getTechName.bind(this);
 
     }
 
@@ -39,15 +38,6 @@ class App extends React.Component {
             });
     }
 
-    getTechName(id) {
-        if (this.state.tech) {
-            return this.state.tech[id]
-        } else {
-            this.getProjectTechnologies()
-                .then(() => this.state.tech[id])
-        }
-    }
-
     getPhotos() {
         return fetch('http://wp.localhost/wp-json/wp/v2/photo')
             .then(response => response.json())
@@ -61,7 +51,7 @@ class App extends React.Component {
         if (this.state.projects && this.state.photos) {
             return (
                 <div>
-                    Projects: {this.state.projects.map((proj, i) => <Project {...proj} techName={this.getTechName} key={i}/>)}<br />
+                    Projects: <br/>{this.state.projects.map((proj, i) => <Project {...proj} technologies={this.state.tech} key={i}/>)}<br />
                     Photos: {this.state.photos.map((proj, i) => <PhotoView {...proj} key={i}/>)}<br />
                 </div>
             );

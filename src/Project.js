@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './scss/Project.css';
 
@@ -8,33 +8,36 @@ class Project extends React.Component {
     constructor(props) {
         super(props);
         console.log(props);
-    }
-
-    getTechnologies() {
-
+        this.state = {
+            tech: null
+        }
     }
 
     render() {
         return (
             <div className="Project">
-                {/*<span className="Project__text">*/}
-                    <span className="Project__title">
-                        {this.props.title.rendered}
-                    </span>
-                    <span className="Project__date">
-                    ({(this.props.acf.datefrom)
-                        ? <span>{this.props.acf.datefrom} - </span>
-                        : ''}
-                    {this.props.acf.dateto})
-                    </span>
-                {/*</span>*/}
-                {this.props.tech.map(v =>
-                    <div className="Project__technology">{this.props.techName(v)}</div>
-                )}
-                <br />
-                <span className="Project__content" dangerouslySetInnerHTML={{__html: this.props.content.rendered}}/>
-                {(this.props.featured_media) ?
-                    <ShowImage cssClass="Project__image" imgid={this.props.featured_media} /> : null}
+                <div className="Project__image-wrap">
+                    <ShowImage cssClass="Project__image" imgid={this.props.featured_media} />
+                </div>
+                <div className="Project__text-wrap">
+                    <div className="Project__head">
+                        <span className="Project__title">
+                            {this.props.title.rendered}
+                        </span>
+                        <span className="Project__date">
+                        ({(this.props.acf.datefrom)
+                            ? <span>{this.props.acf.datefrom} - </span>
+                            : ''}
+                        {this.props.acf.dateto})
+                        </span>
+                    </div>
+                    {(this.props.technologies)
+                        ? this.props.tech.map(tech =>
+                            <div className="Project__technology" key={tech}>{tech} {this.props.technologies[tech]}</div>
+                        )
+                        : <div className="Project__technology">Loading...</div>}
+                    <div className="Project__content" dangerouslySetInnerHTML={{__html: this.props.content.rendered}}/>
+                </div>
             </div>
         );
     }

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import placeholder from './img/image-placeholder.svg'
 
 class ShowImage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {imgsrc: ''};
+        this.state = {imgsrc: placeholder};
         if (this.props.imgid) {
             this.getImage(this.props.imgid);
         }
-
     }
 
     getImage(id) {
@@ -19,17 +19,14 @@ class ShowImage extends React.Component {
     }
 
     render() {
-        if (this.state.imgsrc) {
             return (
                 <img
                     className={this.props.cssClass}
                     src={this.state.imgsrc}
+                    alt={this.props.cssClass.replace('__', ' ')}
                 />
             );
-        } else {
-            return null
         }
-    }
 }
 
 

@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
-class Menu extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
+class Menu extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(props);
+    }
 
-  render() {
-    return (
-        <a href={this.props.val.url} className="menu__url">
-            {this.props.val.name}
-        </a>
-    );
-  }
+
+    render() {
+        return (
+            <a href={this.props.val.url} className="menu__url">
+                {this.props.val.name}
+            </a>
+        );
+    }
 }
 
 export default Menu;
