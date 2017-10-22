@@ -1,4 +1,5 @@
 import React from 'react';
+import {url} from './_shared'
 import placeholder from './img/image-placeholder.svg'
 
 class ShowImage extends React.Component {
@@ -11,7 +12,7 @@ class ShowImage extends React.Component {
     }
 
     getImage(id) {
-        return fetch(`http://wp.localhost/wp-json/wp/v2/media/${id}`)
+        return fetch(`${url}/media/${id}`)
             .then(response => response.json())
             .then(json => {
                 this.setState({imgsrc: json.source_url});

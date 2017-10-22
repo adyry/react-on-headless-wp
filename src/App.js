@@ -1,6 +1,7 @@
 import React from 'react';
+import {url} from './_shared'
 
-// import Menu from './Menu'
+import Menu from './Menu'
 import Project from './Project'
 import PhotoView from './PhotoView'
 
@@ -19,7 +20,7 @@ class App extends React.Component {
     }
 
     getProjects() {
-        return fetch('http://wp.localhost/wp-json/wp/v2/project')
+        return fetch(`${url}/project`)
             .then(response => response.json())
             .then(json => {
                 this.setState({projects: json})
@@ -27,7 +28,7 @@ class App extends React.Component {
     }
 
     getProjectTechnologies() {
-        return fetch('http://wp.localhost/wp-json/wp/v2/tech')
+        return fetch(`${url}/tech`)
             .then(response => response.json())
             .then(json => {
                 const q = {};
@@ -39,7 +40,7 @@ class App extends React.Component {
     }
 
     getPhotos() {
-        return fetch('http://wp.localhost/wp-json/wp/v2/photo')
+        return fetch(`${url}/photo`)
             .then(response => response.json())
             .then(json => {
                 this.setState({photos: json})
@@ -47,17 +48,25 @@ class App extends React.Component {
     }
 
     render() {
-
-        if (this.state.projects && this.state.photos) {
             return (
                 <div>
-                    Projects: <br/>{this.state.projects.map((proj, i) => <Project {...proj} technologies={this.state.tech} key={i}/>)}<br />
-                    Photos: {this.state.photos.map((proj, i) => <PhotoView {...proj} key={i}/>)}<br />
+                    <Menu />
+                    {(this.state.projects)
+                        ?
+                        <div>
+                            Projects: <br/>{this.state.projects.map((proj, i) => <Project {...proj} technologies={this.state.tech} key={i}/>)}<br />
+                        </div>
+                        : 'Loading...'
+                    }
+                    {(this.state.photos)
+                        ?
+                        <div>
+                            Photos: {this.state.photos.map((proj, i) => <PhotoView {...proj} key={i}/>)}<br />
+                        </div>
+                        : 'Loadiinnnnggg...'
+                    }
                 </div>
-            );
-        } else {
-            return <div>Loading...</div>
-        }
+            )
     }
 }
 

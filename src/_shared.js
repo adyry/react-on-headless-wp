@@ -1,0 +1,1 @@
+export const url = 'http://wp.localhost/wp-json/wp/v2'
