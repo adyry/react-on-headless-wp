@@ -22,18 +22,20 @@ class Project extends React.Component {
                 <div className="Project__text-wrap">
                     <div className="Project__head">
                         <span className="Project__title">
-                            {this.props.title.rendered}
+                            {(this.props.acf.disptitle)
+                                ? this.props.acf.disptitle
+                                : this.props.title.rendered}
                         </span>
                         <span className="Project__date">
-                        ({(this.props.acf.datefrom)
-                            ? <span>{this.props.acf.datefrom} - </span>
+                        ({(this.props.acf.start)
+                            ? <span>{this.props.acf.start} - </span>
                             : ''}
-                        {this.props.acf.dateto})
+                        {this.props.acf.stop})
                         </span>
                     </div>
                     {(this.props.technologies)
-                        ? this.props.tech.map(tech =>
-                            <div className="Project__technology" key={tech}>{tech} {this.props.technologies[tech]}</div>
+                        ? this.props.techno.map(tech =>
+                            <div className="Project__technology" key={tech}>{this.props.technologies[tech]}</div>
                         )
                         : <div className="Project__technology">Loading...</div>}
                     <div className="Project__content" dangerouslySetInnerHTML={{__html: this.props.content.rendered}}/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import ShowImage from './ShowImage'
 
-class ProjectView extends React.Component {
+export default class PhotoView extends React.Component {
 
     render() {
         return (
@@ -15,6 +15,3 @@ class ProjectView extends React.Component {
         );
     }
 }
-
-
-export default ProjectView;
