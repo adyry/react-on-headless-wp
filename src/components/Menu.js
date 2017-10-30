@@ -1,5 +1,5 @@
 import React  from 'react';
-import {url} from './_shared'
+import {url} from '../_shared'
 
 
 class Menu extends React.Component {

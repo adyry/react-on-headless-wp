@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './scss/Project.css';
+import '../scss/Project.css';
 
 import ShowImage from './ShowImage'
 

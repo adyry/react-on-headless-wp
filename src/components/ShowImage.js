@@ -1,6 +1,6 @@
 import React from 'react';
-import {url} from './_shared'
-import placeholder from './img/image-placeholder.svg'
+import {url} from '../_shared'
+import placeholder from '../img/image-placeholder.svg'
 
 class ShowImage extends React.Component {
     constructor(props) {

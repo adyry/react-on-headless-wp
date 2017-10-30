@@ -5,7 +5,7 @@ import {
     Link
 } from 'react-router-dom'
 
-import {url, RouteWithProps} from './_shared'
+import {url, RouteWithProps} from '../_shared'
 
 
 import Projects from './Projects'

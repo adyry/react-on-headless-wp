@@ -1,7 +1,7 @@
 import React from 'react';
 
-import PhotoView from './PhotoView'
-import {url} from './_shared'
+import PhotoView from '../components/PhotoView'
+import {url} from '../_shared'
 
 
 export default class Photos extends React.Component {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {url} from './_shared'
-import Project from './Project'
+import {url} from '../_shared'
+import Project from '../components/Project'
 
-import './scss/Projects.css';
+import '../scss/Projects.css';
 
 
 export default class Projects extends React.Component {
