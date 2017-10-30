@@ -1,0 +1,31 @@
+.LandingPage {
+  background: radial-gradient(#3dccbf, #00cc8f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 20px;
+  animation: ulbganimate 5s infinite alternate; }
+  .LandingPage ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    animation: ulanimate 5s infinite alternate; }
+
+@keyframes ulanimate {
+  from {
+    perspective: 450px; }
+  to {
+    perspective: 150px; } }
+
+@keyframes bganimate {
+  from {
+    background: radial-gradient(#3dccbf, #00cc8f); }
+  to {
+    background: radial-gradient(#00cc8f, #3dccbf); } }
+  .LandingPage li {
+    transform: rotateY(45deg);
+    transition: all 0.5s; }
+  .LandingPage li:hover {
+    transform: rotateY(10deg); }

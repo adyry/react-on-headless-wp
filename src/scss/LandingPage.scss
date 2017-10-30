@@ -1,0 +1,43 @@
+@import './_shared';
+
+.LandingPage {
+  background:radial-gradient($c-tile,$c-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 20px;
+  animation: ulbganimate 5s infinite alternate;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    //perspective: 250px;
+    //perspective-origin: 0 0;
+    animation: ulanimate 5s infinite alternate;
+  }
+
+  @keyframes ulanimate {
+    from {perspective: 450px;}
+    to {perspective: 150px;}
+  }
+
+  @keyframes bganimate {
+    from {background:radial-gradient($c-tile,$c-body);}
+    to {background:radial-gradient($c-body,$c-tile);}
+  }
+
+
+  li {
+    transform: rotateY(45deg);
+    transition: all 0.5s;
+  }
+
+  li:hover {
+    transform: rotateY(10deg);
+  }
+
+
+}

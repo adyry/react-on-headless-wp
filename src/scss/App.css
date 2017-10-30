@@ -1,0 +1,17 @@
+.App__menu-wrapper {
+  margin: 20px auto;
+  text-align: center; }
+
+.App__menu {
+  padding: 0;
+  list-style: none; }
+  .App__menu li {
+    font-size: 16px;
+    display: inline-block; }
+  .App__menu li:not(:last-child) {
+    margin-right: 7px; }
+
+.App__content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto; }

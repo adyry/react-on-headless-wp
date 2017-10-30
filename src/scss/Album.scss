@@ -1,5 +1,7 @@
+@import './_shared';
+
 .Album {
-  background-color: #3dccbf;
+  background-color: $c-tile;
   padding: 10px;
   margin: 0 auto 30px auto;
   max-width: 600px;

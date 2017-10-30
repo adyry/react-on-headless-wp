@@ -45,10 +45,7 @@ export default class Projects extends React.Component {
         return (
             <div className="Projects">
                 {(this.state.projects)
-                    ?
-                    <div>
-                        Projects: <br/>{this.state.projects.map((proj, i) => <Project {...proj} technologies={this.state.tech} key={i}/>)}<br />
-                    </div>
+                    ? this.state.projects.map((proj, i) => <Project {...proj} technologies={this.state.tech} key={i}/>)
                     : 'Loading...'
                 }
             </div>

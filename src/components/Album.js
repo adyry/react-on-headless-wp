@@ -22,7 +22,7 @@ export default class Album extends React.Component {
 
     render() {
         return (
-            <div className="Album">
+            <div className="Album Album--other">
                 <h1>{this.props.title.rendered}</h1>
                 <h2>{this.props.acf.date.replace(/_/g, '.')}</h2>
                 <img className="Album__image" src={this.props._embedded["wp:featuredmedia"][0].source_url} alt={this.props.title.rendered + ' Cover'} />

@@ -1,0 +1,31 @@
+@import './_shared';
+
+.App {
+
+  &__menu-wrapper {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  &__menu {
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    li:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+
+  &__content {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Album from '../components/Album'
+import Other from '../components/OtherMusic'
 import {url} from '../_shared'
 
 
@@ -24,14 +25,12 @@ export default class Photos extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="Music">
                 {(this.state.albums)
-                    ?
-                    <div>
-                        {this.state.albums.map((album, i) => <Album {...album} key={i}/>)}<br />
-                    </div>
+                    ? this.state.albums.map((album, i) => <Album {...album} key={i}/>)
                     : 'Loadiinnnnggg...'
                 }
+                <Other />
             </div>
         );
     }
