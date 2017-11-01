@@ -1,5 +1,5 @@
 .LandingPage {
-  background: radial-gradient(#3dccbf, #00cc8f);
+  background: radial-gradient(#3dccbf, #007a54);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   font-size: 20px;
   animation: ulbganimate 5s infinite alternate; }
   .LandingPage ul {
-    padding: 0;
+    padding: 20px;
     margin: 0;
     list-style: none;
     text-align: center;
@@ -25,7 +25,7 @@
   to {
     background: radial-gradient(#00cc8f, #3dccbf); } }
   .LandingPage li {
-    transform: rotateY(45deg);
+    transform: rotateX(40deg);
     transition: all 0.5s; }
   .LandingPage li:hover {
-    transform: rotateY(10deg); }
+    transform: rotateY(30deg); }

@@ -1,7 +1,7 @@
 @import './_shared';
 
 .LandingPage {
-  background:radial-gradient($c-tile,$c-body);
+  background:radial-gradient($seablue, $darkseagreen);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,8 @@
   animation: ulbganimate 5s infinite alternate;
 
   ul {
-    padding: 0;
+    //background-color: rgba(255,255,255,0.5);
+    padding: 20px;
     margin: 0;
     list-style: none;
     text-align: center;
@@ -25,18 +26,18 @@
   }
 
   @keyframes bganimate {
-    from {background:radial-gradient($c-tile,$c-body);}
-    to {background:radial-gradient($c-body,$c-tile);}
+    from {background:radial-gradient($seablue, $seagreen);}
+    to {background:radial-gradient($seagreen, $seablue);}
   }
 
 
   li {
-    transform: rotateY(45deg);
+    transform: rotateX(40deg);
     transition: all 0.5s;
   }
 
   li:hover {
-    transform: rotateY(10deg);
+    transform: rotateY(30deg);
   }
 
 
