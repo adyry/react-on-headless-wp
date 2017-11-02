@@ -1,5 +1,5 @@
 .LandingPage {
-  background: radial-gradient(white, rgba(55, 237, 199, 0.62));
+  background: rgba(83, 205, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,23 +10,18 @@
     content: "";
     position: fixed;
     width: 100%;
-    height: 100%;
-    background: green;
-    background-blend-mode: darken; }
-  .LandingPage::after {
-    z-index: 2;
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(60, 60, 237, 0.62));
-    animation: bganimate 2s infinite alternate; }
+    height: 100%; }
   .LandingPage ul {
     z-index: 3;
-    padding: 20px;
+    background-color: aliceblue;
     margin: 0;
     list-style: none;
-    text-align: center; }
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30%; }
+  .LandingPage a {
+    text-decoration: none;
+    color: #0b1f11; }
 
 @keyframes ulanimate {
   from {
@@ -40,7 +35,4 @@
   to {
     opacity: 0; } }
   .LandingPage li {
-    transform: rotateX(40deg);
     transition: all 0.5s; }
-  .LandingPage li:hover {
-    transform: rotateY(30deg); }

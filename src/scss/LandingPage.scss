@@ -1,7 +1,7 @@
 @import './_shared';
 
 .LandingPage {
-  background: radial-gradient(rgb(255, 255, 255), rgba(55, 237, 199, 0.62));;
+  background: rgba(83, 205, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,31 +16,24 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background:green;
-    //animation: bganimate 5s infinite alternate;
-    background-blend-mode: darken;
-  }
 
-  &::after {
-    z-index: 2;
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background:radial-gradient(rgba(0, 0, 0, 0.1), rgba(60, 60, 237, 0.62));
-    animation: bganimate 2s infinite alternate;
+    //animation: bganimate 5s infinite alternate;
+
   }
 
   ul {
     z-index: 3;
-    //background-color: rgba(255,255,255,0.5);
-    padding: 20px;
+    background-color: aliceblue;
     margin: 0;
     list-style: none;
     text-align: center;
-    //perspective: 250px;
-    //perspective-origin: 0 0;
-    //animation: ulanimate 5s infinite alternate;
+    width: 100%;
+    padding-bottom: 30%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0b1f11;
   }
 
   @keyframes ulanimate {
@@ -55,12 +48,11 @@
 
 
   li {
-    transform: rotateX(40deg);
     transition: all 0.5s;
   }
 
   li:hover {
-    transform: rotateY(30deg);
+
   }
 
 
