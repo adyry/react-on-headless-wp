@@ -1,23 +1,32 @@
 .LandingPage {
-  background: radial-gradient(#3dccbf, #007a54);
+  background: radial-gradient(white, rgba(55, 237, 199, 0.62));
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-size: 20px;
-  animation: ulbganimate 5s infinite alternate; }
+  font-size: 20px; }
   .LandingPage::after {
+    z-index: 1;
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background: radial-gradient(#3dccbf, #00cc8f); }
+    background: green;
+    background-blend-mode: darken; }
+  .LandingPage::after {
+    z-index: 2;
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(60, 60, 237, 0.62));
+    animation: bganimate 2s infinite alternate; }
   .LandingPage ul {
+    z-index: 3;
     padding: 20px;
     margin: 0;
     list-style: none;
-    text-align: center;
-    animation: ulanimate 5s infinite alternate; }
+    text-align: center; }
 
 @keyframes ulanimate {
   from {
@@ -27,9 +36,9 @@
 
 @keyframes bganimate {
   from {
-    background: radial-gradient(#3dccbf, #00cc8f); }
+    opacity: 1; }
   to {
-    background: radial-gradient(#00cc8f, #3dccbf); } }
+    opacity: 0; } }
   .LandingPage li {
     transform: rotateX(40deg);
     transition: all 0.5s; }

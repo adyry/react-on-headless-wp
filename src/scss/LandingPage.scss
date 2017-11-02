@@ -1,23 +1,38 @@
 @import './_shared';
 
 .LandingPage {
-  background:radial-gradient($seablue, $darkseagreen);
+  background: radial-gradient(rgb(255, 255, 255), rgba(55, 237, 199, 0.62));;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font-size: 20px;
-  animation: ulbganimate 5s infinite alternate;
+
+
 
   &::after {
+    z-index: 1;
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background:radial-gradient($c-tile,$c-body);
+    background:green;
+    //animation: bganimate 5s infinite alternate;
+    background-blend-mode: darken;
+  }
+
+  &::after {
+    z-index: 2;
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:radial-gradient(rgba(0, 0, 0, 0.1), rgba(60, 60, 237, 0.62));
+    animation: bganimate 2s infinite alternate;
   }
 
   ul {
+    z-index: 3;
     //background-color: rgba(255,255,255,0.5);
     padding: 20px;
     margin: 0;
@@ -25,7 +40,7 @@
     text-align: center;
     //perspective: 250px;
     //perspective-origin: 0 0;
-    animation: ulanimate 5s infinite alternate;
+    //animation: ulanimate 5s infinite alternate;
   }
 
   @keyframes ulanimate {
@@ -34,8 +49,8 @@
   }
 
   @keyframes bganimate {
-    from {background:radial-gradient($seablue, $seagreen);}
-    to {background:radial-gradient($seagreen, $seablue);}
+    from {opacity: 1;}
+    to {opacity: 0;}
   }
 
 
