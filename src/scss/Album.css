@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 .Album {
   background-color: #3dccbf;
   padding: 10px;
