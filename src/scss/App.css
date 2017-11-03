@@ -1,17 +1,24 @@
-.App__menu-wrapper {
-  margin: 20px auto;
-  text-align: center; }
+* {
+  box-sizing: border-box; }
 
-.App__menu {
-  padding: 0;
-  list-style: none; }
-  .App__menu li {
-    font-size: 16px;
-    display: inline-block; }
-  .App__menu li:not(:last-child) {
-    margin-right: 7px; }
-
-.App__content {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto; }
+.App {
+  background: linear-gradient(217deg, rgba(200, 211, 217, 0.8), rgba(158, 54, 54, 0) 70.71%), linear-gradient(127deg, rgba(166, 228, 157, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(131, 110, 175, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  min-height: 100vh;
+  min-width: 100vw; }
+  .App__menu-wrapper {
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center; }
+  .App__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .App__menu li {
+      font-size: 16px;
+      display: inline-block; }
+    .App__menu li:not(:last-child) {
+      margin-right: 7px; }
+  .App__content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto; }

@@ -4,6 +4,7 @@ import {url} from '../_shared'
 import Project from '../components/Project'
 
 import '../scss/Projects.css';
+import '../scss/Spinner.css';
 
 
 export default class Projects extends React.Component {
@@ -46,7 +47,10 @@ export default class Projects extends React.Component {
             <div className="Projects">
                 {(this.state.projects)
                     ? this.state.projects.map((proj, i) => <Project {...proj} technologies={this.state.tech} key={i}/>)
-                    : 'Loading...'
+                    : <div className="spinner">
+                        <div className="double-bounce1"></div>
+                        <div className="double-bounce2"></div>
+                    </div>
                 }
             </div>
 

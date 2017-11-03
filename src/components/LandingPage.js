@@ -14,10 +14,10 @@ export default class LandingPage extends React.Component {
                     <Route exact path="/" render={() =>
                         <div className="LandingPage">
                             <ul className="LandingPage__menu">
-                                <li><Link to="/portfolio">Dev Portfolio</Link></li>
-                                <li><Link to="/music">Music</Link></li>
-                                <li><Link to="/photos">Photos</Link></li>
-                                <li><Link to="/other">Other</Link></li>
+                                <li className="LandingPage__li"><Link to="/portfolio" className="LandingPage__link">Dev Portfolio</Link></li>
+                                <li className="LandingPage__li"><Link to="/music" className="LandingPage__link">Music</Link></li>
+                                <li className="LandingPage__li"><Link to="/photos" className="LandingPage__link">Photos</Link></li>
+                                <li className="LandingPage__li"><Link to="/other" className="LandingPage__link">Other</Link></li>
                             </ul>
                         </div>}/>
                     <Route component={App}/>

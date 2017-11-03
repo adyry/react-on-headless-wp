@@ -1,32 +1,31 @@
+* {
+  box-sizing: border-box; }
+
 .LandingPage {
-  background: radial-gradient(white, rgba(55, 237, 199, 0.62));
+  background: linear-gradient(217deg, rgba(200, 211, 217, 0.8), rgba(158, 54, 54, 0) 70.71%), linear-gradient(127deg, rgba(166, 228, 157, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(131, 110, 175, 0.8), rgba(0, 0, 255, 0) 70.71%);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-size: 20px; }
-  .LandingPage::after {
-    z-index: 1;
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: green;
-    background-blend-mode: darken; }
-  .LandingPage::after {
+  font-size: 24px; }
+  .LandingPage__menu {
+    background-color: #d0e0ff;
+    mix-blend-mode: unset;
+    padding: 0;
     z-index: 2;
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(60, 60, 237, 0.62));
-    animation: bganimate 2s infinite alternate; }
-  .LandingPage ul {
-    z-index: 3;
-    padding: 20px;
     margin: 0;
     list-style: none;
-    text-align: center; }
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px dashed #0b1f11; }
+  .LandingPage__link {
+    text-decoration: none;
+    color: #0b1f11;
+    width: 100%; }
 
 @keyframes ulanimate {
   from {
@@ -39,8 +38,14 @@
     opacity: 1; }
   to {
     opacity: 0; } }
-  .LandingPage li {
-    transform: rotateX(40deg);
-    transition: all 0.5s; }
-  .LandingPage li:hover {
-    transform: rotateY(30deg); }
+  .LandingPage__li {
+    flex: 1 1 100%;
+    height: 40px;
+    display: flex;
+    align-items: center; }
+  .LandingPage__li:hover a {
+    text-decoration: underline;
+    font-size: 25px;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-out;
+    text-shadow: 0 -5px 1px rgba(46, 206, 103, 0.7), 0 0 1px rgba(117, 176, 212, 0.7), 0 5px 1px rgba(81, 68, 217, 0.7); }

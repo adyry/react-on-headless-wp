@@ -3,4 +3,74 @@ $max-width: 900px;
 
 $seagreen: #00cc8f;
 $darkseagreen: #007a54;
-$seablue: #31c3cc;
+$seablue: #3dccbf;
+
+
+$lp-txt: #0b1f11;
+$lp-bg: #d0e0ff;
+
+$lp-shadow:
+        0 -5px 1px rgba(46, 206, 103, 0.7),
+        0 0 1px rgba(117, 176, 212, 0.7),
+        0 5px 1px rgba(81, 68, 217, 0.7);
+
+$lp_gradient:
+        linear-gradient(217deg, rgba(200, 211, 217, 0.8), rgba(158, 54, 54, 0) 70.71%),
+        linear-gradient(127deg, rgba(166, 228, 157, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(131, 110, 175, 0.8), rgba(0, 0, 255, 0) 70.71%);
+
+$lp_gradient2:
+        linear-gradient(217deg, rgba(200, 211, 217, 0.8), rgba(158, 54, 54, 0) 70.71%),
+        linear-gradient(127deg, rgba(166, 228, 157, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(131, 110, 175, 0.8), rgba(0, 0, 255, 0) 70.71%),
+        radial-gradient(circle at 35% 18%, rgba(70, 0, 255, 0.36), rgba(99, 78, 78, 0.57) 44.71%);
+
+
+* {
+  box-sizing: border-box;
+}
+
+//html, body, div, span, applet, object, iframe,
+//h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+//a, abbr, acronym, address, big, cite, code,
+//del, dfn, em, img, ins, kbd, q, s, samp,
+//small, strike, strong, sub, sup, tt, var,
+//b, u, i, center,
+//dl, dt, dd, ol, ul, li,
+//fieldset, form, label, legend,
+//table, caption, tbody, tfoot, thead, tr, th, td,
+//article, aside, canvas, details, embed,
+//figure, figcaption, footer, header, hgroup,
+//menu, nav, output, ruby, section, summary,
+//time, mark, audio, video {
+//  margin: 0;
+//  padding: 0;
+//  border: 0;
+//  font-size: 100%;
+//  font: inherit;
+//  vertical-align: baseline;
+//}
+//
+///* HTML5 display-role reset for older browsers */
+//article, aside, details, figcaption, figure,
+//footer, header, hgroup, menu, nav, section {
+//  display: block;
+//}
+//body {
+//  line-height: 1;
+//}
+//ol, ul {
+//  list-style: none;
+//}
+//blockquote, q {
+//  quotes: none;
+//}
+//blockquote:before, blockquote:after,
+//q:before, q:after {
+//  content: '';
+//  content: none;
+//}
+//table {
+//  border-collapse: collapse;
+//  border-spacing: 0;
+//}
